@@ -1,0 +1,71 @@
+<block-ui>
+  <!-- Your app markup here -->
+</block-ui>
+<header class="main-header userside-header">
+    <li class="user_Mjcx red-li" style="text-align: end;">
+        <a (click)="logout()" class="logout_btn" style="color: white;font-size: 20PX;padding: 10px;">Logout</a>
+      </li>
+</header>
+<section class="content container-fluid">
+  <div class="row">
+    <!-- <div > -->
+    <div class="col-md-4 col-sm-6" *ngFor="let Brand of posts">
+      <div class="brand-box" style="min-height: 200px;">
+        <h2 style=" font-size: 22px; color: #666674;"> {{ Brand.title}}</h2>
+        <div class="brand-box-content">
+          <ul class="brand-number">
+            <!-- <li>
+              <img src="assets/images/camera_icon.png" alt="" /></li> -->
+            <li>
+              {{ Brand.description}}
+            </li>
+          </ul>
+          <ul class="brand-list-footer">
+            <li>
+              <img src="assets/images/user_icon.png" class="userimg" alt="" />{{ Brand.createdBy.firstName}}
+              {{ Brand.createdBy.lastName}}
+            </li>
+            <li style=" font-size: 15px; ">
+                <img src="assets/images/clock.png" class="userimg" alt="" />{{ Brand.createdBy.createdAt |  date:'medium'}}
+              </li>
+
+            <!-- <li>
+              <a [routerLink]="['/buzzybooth/business/b/'+Brand['_id']]" target="_blank" (click)="BrandStats(Brand)">
+                <img src="assets/images/slideshow_icon.png" alt="" />Slideasdfasdfasshow
+              </a>
+            </li> -->
+            <li>
+              <a>
+                <i class="fa fa-ellipsis-v"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-md-4 col-sm-6" *ngIf="userType != 'User'">
+      <a [routerLink]="['/add-blog']" target="_blank">
+        <div class="brand-box" style="text-align: center;max-height: 150px;min-height: 200px">
+          <div class="brand-pic">
+            <img src="assets/images/add-box.jpg" alt="" style="max-height: 150px;"/>
+          </div>
+          <!-- <h2></h2>
+          <div class="brand-box-content">
+            <ul class="brand-number">
+              <li></li>
+              <li></li>
+            </ul>
+            <ul class="brand-list-footer">
+              <li></li>
+              <li></li>
+              <li>
+
+              </li>
+            </ul>
+          </div> -->
+        </div>
+      </a>
+    </div>
+  </div>
+</section>

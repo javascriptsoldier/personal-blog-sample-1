@@ -1,0 +1,69 @@
+
+.flip-frame{
+	-webkit-perspective: 10000px;
+	-moz-perspective: 10000px;
+	-ms-perspective: 10000px;
+	perspective: 10000px;
+}
+
+.flip-frame .flip{
+	position: relative;	
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+}
+
+.flip-frame .flip.animate{
+	-webkit-transition: 0.6s;
+	-moz-transition: 0.6s;
+	-ms-transition: 0.6s;
+	transition: 0.6s;
+	-webkit-transform: rotateY(180deg);
+     	-moz-transform: rotateY(180deg);     
+      	-ms-transform: rotateY(180deg);      
+        transform: rotateY(180deg);
+}
+
+.flip-frame .flip.animateL{
+	-webkit-transform: rotateY(-180deg);
+	-moz-transform: rotateY(-180deg);     
+      	-ms-transform: rotateY(-180deg);      
+        transform: rotateY(-180deg);
+}
+
+.flip-frame .slide{
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	position: absolute;
+	top: 0;
+	left: -999em;
+	width: 100%;
+}
+
+.flip-frame .slide.front, .flip-frame .slide.back{
+	left: 0;
+}
+.flip-frame .slide{
+	-webkit-backface-visibility:hidden;
+	-moz-backface-visibility:hidden;
+	-ms-backface-visibility:hidden;
+	backface-visibility:hidden;
+}
+.flip-frame .slide.front{
+	z-index: 2;
+}
+
+.flip-frame .slide.back{
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);     
+      	-ms-transform: rotateY(180deg);      
+        transform: rotateY(180deg);
+	z-index: 1;
+}
+
+.slider-nav {
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    opacity: 0;
+}

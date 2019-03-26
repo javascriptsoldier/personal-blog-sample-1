@@ -1,0 +1,5 @@
+{
+	"host": "localhost",
+	"DBhost": "mongodb://localhost:27017/blog",
+	"jwt_SECRETS": "Anilkumar25121991"
+}

@@ -1,0 +1,99 @@
+<block-ui>
+  <!-- Your app markup here -->
+</block-ui>
+
+<body class="user-log-body">
+
+  <div class="user-login-page">
+    <div class="user-login-bg">
+      <div class="login-overlay"></div>
+    </div>
+    <div class="user-login-box">
+      <div class="login-box">
+        <!-- /.login-logo -->
+        <div class="login-box-body">
+
+          <form [formGroup]="userSignupForm" #prodForm="ngForm">
+            <div class="form-group has-feedback">
+              <input class="form-control" formControlName="firstName" placeholder="First Name" type="text">
+              <span class="glyphicon form-control-feedback">
+                <img src="/assets/images/user_icon_login.png" alt="" />
+              </span>
+            </div>
+            <div class="col-sm-8 col-xs-12" *ngIf="userSignupForm.controls['firstName'].touched || submitted">
+              <p class="form_error" style="color: red;"
+                *ngIf="userSignupForm.controls['firstName'].hasError('required')">You must enter business name email</p>
+              <p class="form_error" style="color: red;"
+                *ngIf="userSignupForm.controls['firstName'].hasError('minlength')">Minimum 2 characters should be entered
+              </p>
+              <!-- <p class="form_error" style="color: red;" *ngIf="userSignupForm.controls['name'].hasError('maxlength')">Maximum 15 characters should be entered</p> -->
+            </div>
+            <div class="form-group has-feedback">
+              <input class="form-control" formControlName="lastName" placeholder="Second Name" type="text">
+              <span class="glyphicon form-control-feedback">
+                <img src="/assets/images/user_icon_login.png" alt="" />
+              </span>
+            </div>
+            <div class="col-sm-8 col-xs-12" *ngIf="userSignupForm.controls['lastName'].touched || submitted">
+              <p class="form_error" style="color: red;" *ngIf="userSignupForm.controls['lastName'].hasError('required')">You
+                must enter business name email</p>
+              <p class="form_error" style="color: red;" *ngIf="userSignupForm.controls['lastName'].hasError('minlength')">
+                Minimum 2 characters should be entered</p>
+              <!-- <p class="form_error" style="color: red;" *ngIf="userSignupForm.controls['name'].hasError('maxlength')">Maximum 15 characters should be entered</p> -->
+            </div>
+            <div class="form-group has-feedback">
+              <input class="form-control" formControlName="email" placeholder="Email" type="email">
+              <span class="glyphicon form-control-feedback">
+                <img src="/assets/images/email_icon_login.png" alt="" />
+              </span>
+            </div>
+            <div class="col-sm-8 col-xs-12" *ngIf="userSignupForm.controls['email'].touched || submitted">
+              <p class="form_error" style="color: red;" *ngIf="userSignupForm.controls['email'].hasError('required')">
+                You must enter email id</p>
+              <p class="form_error" style="color: red;"
+                *ngIf="userSignupForm.controls['email'].hasError('minlength')">Minimum 2 characters should be entered
+              </p>
+              <p class="form_error" style="color: red;" *ngIf="userSignupForm.controls['email'].hasError('pattern')">
+                Please enter a valid email address</p>
+
+            </div>
+            <div class="form-group has-feedback">
+              <input class="form-control" formControlName="password" placeholder="Password" type="password">
+
+              <span class="glyphicon form-control-feedback">
+                <img src="/assets/images/password_icon_login.png" alt="" />
+              </span>
+              <!-- <a (click)="forgotpassword()" style="cursor: pointer" class="forgot-link">Forgot?</a> -->
+            </div>
+            <div class="col-sm-8 col-xs-12" *ngIf="userSignupForm.controls['password'].touched || submitted">
+              <p class="form_error" style="color: red;"
+                *ngIf="userSignupForm.controls['password'].hasError('required')">You must enter password</p>
+            </div>
+            <div class="row">
+              <!-- <div class="col-xs-12">
+                <div class="checkbox checkbox-primary">
+                  <input id="checkbox" type="checkbox" (change)="RememberMe()">
+                  <label for="checkbox">
+                    Remember Password
+                  </label>
+                </div>
+              </div> -->
+              <!-- /.col -->
+              <div class="col-xs-12">
+                <div class="text-center login-padding">
+                  <button type="submit"  (click)="userSignup(userSignupForm.value)" class="btn btn-primary">Sign Up</button>
+                </div>
+              </div>
+              <!-- /.col -->
+            </div>
+          </form>
+
+
+
+        </div>
+        <!-- /.login-box-body -->
+      </div>
+
+    </div>
+  </div>
+</body>

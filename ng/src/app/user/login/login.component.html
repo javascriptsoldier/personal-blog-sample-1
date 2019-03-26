@@ -1,0 +1,102 @@
+<block-ui>
+  <!-- Your app markup here -->
+</block-ui>
+
+<body class="user-log-body">
+
+  <div *ngIf="signinBox" class="user-login-page">
+    <div class="user-login-bg">
+      <div class="login-overlay"></div>
+    </div>
+    <div class="user-login-box">
+      <div class="login-box">
+        <!-- <div class="login-logo">
+          <a href="#">
+            <img src="data:image/png;base64,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" alt="" />
+          </a>
+        </div> -->
+        <!-- /.login-logo -->
+        <div class="login-box-body">
+
+          <form [formGroup]="userLoginForm" #prodForm="ngForm">
+            <div class="form-group has-feedback">
+              <input class="form-control" formControlName="email" placeholder="Email" type="email">
+              <span class="glyphicon form-control-feedback">
+                <img src="/assets/images/email_icon_login.png" alt="" />
+              </span>
+            </div>
+            <div class="col-sm-8 col-xs-12" *ngIf="userLoginForm.controls['email'].touched || submitted">
+              <p class="form_error" style="color: red;" *ngIf="userLoginForm.controls['email'].hasError('required')">You must enter email id</p>
+              <p class="form_error" style="color: red;" *ngIf="userLoginForm.controls['email'].hasError('minlength')">Minimum 2 characters should be entered</p>
+              <p class="form_error" style="color: red;" *ngIf="userLoginForm.controls['email'].hasError('pattern')">Please enter a valid email address</p>
+
+            </div>
+            <div class="form-group has-feedback">
+              <input class="form-control" formControlName="password" placeholder="Password" type="password">
+
+              <span class="glyphicon form-control-feedback">
+                <img src="/assets/images/password_icon_login.png" alt="" />
+              </span>
+              <a (click)="forgotpassword()" style="cursor: pointer" class="forgot-link">Forgot?</a>
+            </div>
+            <div class="col-sm-8 col-xs-12" *ngIf="userLoginForm.controls['password'].touched || submitted">
+              <p class="form_error" style="color: red;" *ngIf="userLoginForm.controls['password'].hasError('required')">You must enter password</p>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="checkbox checkbox-primary">
+                  <input id="checkbox" type="checkbox" (change)="RememberMe()">
+                  <label for="checkbox">
+                    Remember Password
+                  </label>
+                </div>
+              </div>
+              <!-- /.col -->
+              <div class="col-xs-12">
+                <div class="text-center login-padding">
+                  <button type="submit" (click)="userLogin(userLoginForm.value)" class="btn btn-primary">Login</button>
+                </div>
+              </div>
+              <!-- /.col -->
+            </div>
+          </form>
+
+
+
+        </div>
+        <!-- /.login-box-body -->
+      </div>
+
+    </div>
+  </div>
+
+  <div *ngIf="forgotPasswordBox" class="login-box">
+    <div class="login-logo">
+      <a href="">
+        <b>Forgot Password? </b>
+      </a>
+    </div>
+    <div class="login-box-body">
+      <p class="login-box-msg">Enter your email and business name</p>
+      <form [formGroup]="forgotPassword" #prodForm="ngForm" (ngSubmit)="forgotPasswordFunc(forgotPassword.valid)">
+        <div class="form-group has-feedback">
+          <input type="email" class="form-control" placeholder="Email" formControlName="email">
+        </div>
+        <div *ngIf="forgotPassword.controls['email'].touched ">
+          <p class="form_error" *ngIf="forgotPassword.controls['email'].hasError('required')">You must enter the email id</p>
+          <p class="form_error" *ngIf="forgotPassword.controls['email'].hasError('minlength')">Minimum 3 characters must be entered</p>
+          <p class="form_error" *ngIf="forgotPassword.controls['email'].hasError('pattern')">Incorrect Email Pattern</p>
+        </div>
+        <div class="form-group has-feedback Login">
+          <button type="submit" [disabled]="!forgotPassword.valid" class="btn btn-danger btn-block btn-flat">Submit</button>
+        </div>
+
+        <div class="form-group has-feedback Login login-right">
+          <span class="forgetspan">
+            <a type="submit" style="cursor: pointer" class="" (click)="signInClicked()">Back to Login</a>
+          </span>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
