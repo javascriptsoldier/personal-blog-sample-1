@@ -49,7 +49,7 @@ app.get('/monitoring', function (req, res) {
 
 app.use(cors());
 // app.use(express.static(__dirname + '../ng/dis
-app.use(express.static(path.join(__dirname, '/dist')));
+app.use(express.static(path.join(__dirname, '/dist/frontend')));
 // app.use(express.static(path.join(__dirname, '../frontend/dist')));
 
 // view engine setup
@@ -59,7 +59,7 @@ app.engine('html', function (path, opt, fn) {
 		return fn(null, str);
 	});
 });
-app.set('views', path.join(__dirname, '/dist'));
+app.set('views', path.join(__dirname, '/dist/frontend'));
 app.set('view engine', 'html');
 
 // uncomment after placing your favicon in /public

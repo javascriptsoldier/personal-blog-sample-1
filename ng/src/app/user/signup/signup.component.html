@@ -80,8 +80,8 @@
               </div> -->
               <!-- /.col -->
               <div class="col-xs-12">
-                <div class="text-center login-padding">
-                  <button type="submit"  (click)="userSignup(userSignupForm.value)" class="btn btn-primary">Sign Up</button>
+                <div class="text-center login-padding"  style="width: 100%; padding-top: 10px !important">
+                  <button type="submit"  (click)="userSignup(userSignupForm.value)" class="btn btn-primary" style="width: 100%;">Sign Up</button>
                 </div>
               </div>
               <!-- /.col -->
@@ -92,6 +92,7 @@
 
         </div>
         <!-- /.login-box-body -->
+        <div [className]="'signup'"><p>Already registered ? <a [routerLink]="['/login']">Login</a> </p></div>
       </div>
 
     </div>

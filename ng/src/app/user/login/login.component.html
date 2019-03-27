@@ -53,8 +53,8 @@
               </div>
               <!-- /.col -->
               <div class="col-xs-12">
-                <div class="text-center login-padding">
-                  <button type="submit" (click)="userLogin(userLoginForm.value)" class="btn btn-primary">Login</button>
+                <div class="text-center login-padding" style="width: 100%; padding-top: 10px !important">
+                  <button type="submit" (click)="userLogin(userLoginForm.value)" class="btn btn-primary" style="width: 100%;">Login</button>
                 </div>
               </div>
               <!-- /.col -->
@@ -64,6 +64,7 @@
 
 
         </div>
+        <div [className]="'login'"><p>Not registered ? <a [routerLink]="['/signup']">Create an account</a> </p></div>
         <!-- /.login-box-body -->
       </div>
 
