@@ -11,7 +11,7 @@
     "async": "^2.6.0",
     "aws-sdk": "^2.207.0",
     "base64image-to-file": "^1.2.0",
-    "bcrypt": "^1.0.3",
+    "bcrypt": "^5.0.0",
     "body-parser": "*",
     "connect-mongo": "*",
     "cookie": "*",
