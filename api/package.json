@@ -37,7 +37,7 @@
     "https": "^1.0.0",
     "jsonwebtoken": "^8.2.0",
     "moment": "*",
-    "moment-timezone": "^0.5.14",
+    "moment-timezone": "^0.5.35",
     "mongoose": "*",
     "morgan": "^1.9.0",
     "multer": "^1.2.0",
